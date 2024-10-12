@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import 'model_inference.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -35,7 +37,8 @@ class ImageUploadScreen extends StatefulWidget {
 class ImageUploadScreenState extends State<ImageUploadScreen> {
   File? _image; // 선택한 이미지 파일
   final picker = ImagePicker(); // 이미지 선택기
-  String _resultText = ''; // 서버로부터 받은 결과 텍스트
+  final inference = ModelInference();
+  var _resultText = "";
 
   @override
   void initState() {
@@ -93,7 +96,14 @@ class ImageUploadScreenState extends State<ImageUploadScreen> {
 
   // 이미지 업로드 함수
   Future<void> _inferenceImage() async {
+    File? inner = _image;
 
+    if(inner != null) {
+      int res = await inference.inference(inner);
+      setState(() {
+        _resultText = 'res: $res';
+      });
+    }
   }
 
   @override
@@ -120,7 +130,7 @@ class ImageUploadScreenState extends State<ImageUploadScreen> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _inferenceImage,
-              child: const Text('Upload Image'),
+              child: const Text('Inference Image'),
             ),
             const SizedBox(height: 20),
             Text(_resultText),

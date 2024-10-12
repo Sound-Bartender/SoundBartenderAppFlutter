@@ -39,6 +39,9 @@ dependencies:
   http: ^1.2.2
   path: ^1.9.0
   permission_handler: ^11.3.1
+  tflite_flutter: ^0.11.0
+  image: ^4.2.0
+#  tflite_flutter_helper: ^0.3.1  # 이미지 전처리 관련 도구
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +65,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/resnet50.tflite
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

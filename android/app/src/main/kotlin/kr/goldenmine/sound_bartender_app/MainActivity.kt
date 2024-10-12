@@ -1,4 +1,4 @@
-package com.example.sound_bartender_app
+package kr.goldenmine.sound_bartender_app
 
 import io.flutter.embedding.android.FlutterActivity
 
