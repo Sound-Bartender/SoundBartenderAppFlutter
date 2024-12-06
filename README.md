@@ -1,16 +1,5 @@
 # sound_bartender_app
 
-A new Flutter project.
+기기의 모델 추론을 대신 해주는 어플리케이션
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+대부분의 플러터 추론 라이브러리가 최신 버전에서 작동하지 않으므로 개발중단
