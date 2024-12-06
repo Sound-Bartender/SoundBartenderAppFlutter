@@ -1,4 +1,6 @@
-# sound_bartender_app
+# SounderBartenderAppFlutter
+
+싸운드-빠텐더~
 
 기기의 모델 추론을 대신 해주는 어플리케이션
 
